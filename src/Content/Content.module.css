@@ -1,7 +1,8 @@
 .content {
-    background-color: #cfcfcf;
-    height: 100vh;
+    background-color: #f8fafc;
+    height: calc(100vh - 60px);
     max-width: 100%;
     grid-area: content;
+    min-height: 100%;
    
 }
