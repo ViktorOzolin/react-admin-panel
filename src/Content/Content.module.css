@@ -1,0 +1,7 @@
+.content {
+    background-color: #cfcfcf;
+    height: 100vh;
+    max-width: 100%;
+    grid-area: content;
+   
+}

@@ -1,0 +1,8 @@
+.App {
+    display: grid;
+    grid-template-areas: "sidebar header header header"
+                         "sidebar content content content";
+                        
+    grid-template-columns: 15% 85%;
+    
+}
