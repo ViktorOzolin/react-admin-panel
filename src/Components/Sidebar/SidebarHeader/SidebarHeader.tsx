@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './SidebarHeader.module.css';
-import SidebarLogo from "./SidebarLogo";
-import SidebarMenu from "./SidebarMenu";
+import SidebarLogo from "./SidebarLogo/SidebarLogo";
+import SidebarMenu from "./SidebarMenu/SidebarMenu";
 
 
 
