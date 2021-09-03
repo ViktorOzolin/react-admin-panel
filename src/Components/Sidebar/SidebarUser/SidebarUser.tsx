@@ -1,24 +1,39 @@
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React,{useState} from 'react';
 import styles from './SidebarUser.module.css'
 
 
 
 const SidebarUser = () => {
+
+const [onToggle,setToggle] = useState(false);
+
+
+const onToggleHandler = (event:any) => {
+    setToggle(!onToggle)
+}
+
     return (
         <div className={styles.menu}>
+            
+            <a href="#" className={styles.button} onClick={onToggleHandler} >
             <div className={styles.avatar}>
-                <img src="https://w7.pngwing.com/pngs/831/88/png-transparent-user-profile-computer-icons-user-interface-mystique-miscellaneous-user-interface-design-smile.png" alt="photo" className={styles.avatar__img} />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Antu_config-users.svg/1024px-Antu_config-users.svg.png" alt="photo" className={styles.avatar__img} />
             </div>
-            <a href="#" className={styles.button}>
-                <div className="wrapper">
+                <div className={styles.wrapper}>
                     <div className={styles.username}>Viktor</div>
                     <div className={styles.position}>Programmer</div>
+                    <FontAwesomeIcon className={styles.caret} icon={faCaretDown} color="rgb(114, 114, 114)" size='xs'/>
                 </div>
-                <FontAwesomeIcon icon={faCaretDown} color="rgb(114, 114, 114)"/>
-                
             </a>
+           {onToggle && 
+           <ul className={styles.nav}>
+                <li className={styles.link}><a href="#" >My Profile</a></li>
+                <li className={styles.link}><a href="#" >Edit Profile</a></li>
+                <li className={styles.link}><a href="#" >Settings</a></li> 
+            </ul>
+            } 
         </div>
     );
 }

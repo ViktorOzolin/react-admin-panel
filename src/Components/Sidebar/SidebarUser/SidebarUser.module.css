@@ -1,41 +1,68 @@
+* {
+    box-sizing: border-box;
+}
 .menu {
-    height: 70px;
-    width: 90%;
-    border-bottom: 2px solid rgb(240, 240, 240);
-    margin: 0 auto;
+    border-bottom: 1px solid #f1f1f1;
+    margin: 0 15px;
     display: flex;
-    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+
     
 
 }
 .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 .avatar__img {
    max-width: 100%;
 }
 .wrapper {
-   
+  width: 100%;
+  position: relative;
 }
+
 .button {
     text-decoration: none;
     color: #000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 0 15px 0 10px;
-    
-
+   
+}    
+.caret {
+    position: absolute;
+    top: 10px;
+    right: 0px;
 }
+
+
 .username {
-    color: rgb(114, 114, 114);
+    color: #777;
+    font-size: 14px;
 }
 .position {
     font-weight: 500;
+    font-size: 12px;
+    color: #555;
+}
+
+.nav {
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+.link {
+    list-style: none;
+    padding: 7px 0;
+}
+.link a {
+    text-decoration: none;
+    color: #777;
     font-size: 14px;
+    font-weight: 500;
 }
